@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 @Component({
   selector: 'app-user-profile',
@@ -7,6 +7,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 })
 export class UserProfileComponent implements OnInit {
 UserForm!:FormGroup;
+@Input()Message!:any;
 
 public constructor(private fb:FormBuilder)
 {
