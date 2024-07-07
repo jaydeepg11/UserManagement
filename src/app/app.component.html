@@ -1,1 +1,2 @@
-<app-user-profile [Message]="title"></app-user-profile>
+{{username}}
+<app-user-profile [Message]="title" (UserName)="display($event)"></app-user-profile>

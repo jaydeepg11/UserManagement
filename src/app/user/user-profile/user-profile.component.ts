@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 @Component({
   selector: 'app-user-profile',
@@ -8,7 +8,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 export class UserProfileComponent implements OnInit {
 UserForm!:FormGroup;
 @Input()Message!:any;
-
+@Output()UserName: EventEmitter<string>=new EventEmitter<string>();
 public constructor(private fb:FormBuilder)
 {
 
@@ -24,6 +24,7 @@ public constructor(private fb:FormBuilder)
   formsubmit()
   {
     console.log(this.UserForm.value.FirstName + ' ' +this.UserForm.value.LastName + ' ' +this.UserForm.value.Salary);
+    this.UserName.emit(this.UserForm.value.FirstName+this.UserForm.value.LastName);
   }
 
 }
