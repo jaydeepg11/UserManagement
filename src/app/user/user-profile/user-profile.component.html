@@ -1,0 +1,28 @@
+<p>user-profile works!</p>
+<form [formGroup]="UserForm" (ngSubmit)="formsubmit()">
+<table>
+    <thead>
+       <tr><th colspan="2">User Profile</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name=""  formControlName="FirstName"/></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="" formControlName="LastName"/></td>
+        </tr>
+        <tr>
+            <td>
+                Salary
+            </td>
+            <td><input type="text" name="" formControlName="Salary"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Clear"/>  </td>
+            <td><input type="Submit" value="Submit"/>  </td>
+        </tr>
+    </tbody>
+</table>
+</form>
