@@ -11,7 +11,6 @@ import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboar
 import { InformationComponent } from './Dashboard/main-dashboard/information/information.component';
 import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
