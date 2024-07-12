@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild,AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, ElementRef, ViewChild,AfterViewInit, ViewChildren, QueryList } from '@angular/core';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +9,7 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 export class AppComponent implements AfterViewInit  {
   
   
-  title = 'UserManagement';
+  title = 'Registration';
   username !:string;
   @ViewChild('textLabel')Label!:ElementRef
 
@@ -19,6 +19,11 @@ export class AppComponent implements AfterViewInit  {
   {
     this.username ='UserName '+value + ' has been Added';
   }
+
+constructor(private route:Router)
+{
+
+}
 
   ngAfterViewInit(): void {
     console.log(this.Label.nativeElement.innerHTML="User Management System");
@@ -31,4 +36,8 @@ export class AppComponent implements AfterViewInit  {
     this.Label.nativeElement.style.color="red";
   }
   
+  advanced()
+  {
+    this.route.navigate(["dashboard"]);
+  }
 }
