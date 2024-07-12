@@ -8,6 +8,8 @@ import { MainnavbarComponent } from './Navbar/mainnavbar/mainnavbar.component';
 import { AboutUsComponent } from './about/about-us/about-us.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboard.component';
+import { InformationComponent } from './Dashboard/main-dashboard/information/information.component';
+import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboar
     MainnavbarComponent,
     AboutUsComponent,
     ContactUsComponent,
-    MainDashboardComponent
+    MainDashboardComponent,
+    InformationComponent,
+    AddressComponent
     
   ],
   imports: [

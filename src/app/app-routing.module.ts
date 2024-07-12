@@ -4,12 +4,14 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { AboutUsComponent } from './about/about-us/about-us.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboard.component';
+import { InformationComponent } from './Dashboard/main-dashboard/information/information.component';
+import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
 
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
                         {path:'about',component:AboutUsComponent},
                         {path:'contact',component:ContactUsComponent},
-                        {path:'dashboard',component:MainDashboardComponent},
+                        {path:'dashboard',component:MainDashboardComponent,children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent}]},
                         {path:"**",redirectTo:"Dashboard"}
                       ];
 
