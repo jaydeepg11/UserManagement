@@ -1,2 +1,6 @@
 {{username}}
-<app-user-profile [Message]="title" (UserName)="display($event)"></app-user-profile>
+<div>
+    <label for="User" #textLabel class="green"></label><br/>
+    <input type="button" (click)="changecolor()" value="change color"/>
+</div>
+<app-user-profile #childview [Message]="title" (UserName)="display($event)"></app-user-profile>

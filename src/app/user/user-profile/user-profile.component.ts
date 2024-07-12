@@ -8,6 +8,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 export class UserProfileComponent implements OnInit {
 UserForm!:FormGroup;
 @Input()Message!:any;
+Message2:string="userManagement2";
 @Output()UserName: EventEmitter<string>=new EventEmitter<string>();
 public constructor(private fb:FormBuilder)
 {
