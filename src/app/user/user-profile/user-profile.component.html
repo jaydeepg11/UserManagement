@@ -41,8 +41,8 @@
         <tr *ngFor="let item of data">
             <td>{{item.userId}}</td>
             <td>{{item.id}}</td>
-            <td>{{item.title}}</td>
-            <td>{{item.completed}}</td>
+            <td>{{item.title  | titlecase}}</td>
+            <td>{{item.completed | translate}}</td>
         </tr>
     </table>
 </div>

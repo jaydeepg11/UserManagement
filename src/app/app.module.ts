@@ -15,6 +15,7 @@ import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { HeaderInterceptor } from './interceptors/header.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +28,6 @@ import { HeaderInterceptor } from './interceptors/header.interceptor';
     MapComponent,
     LinkComponent,
     AdminaboutUsComponent
-    
-    
   ],
   imports: [
     BrowserModule,
