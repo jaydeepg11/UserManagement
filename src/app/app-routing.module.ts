@@ -10,13 +10,14 @@ import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
 import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 import { authGuard } from './gurads/auth.guard';
 import { adminGuard } from './gurads/admin.guard';
+import { notsubmitGuard } from './gurads/notsubmit.guard';
 
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
                         {path:'about',component:AboutUsComponent},
                         {path:'contact/:id',component:ContactUsComponent},
                         {path:'dashboard',component:MainDashboardComponent,canActivateChild:[adminGuard],children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent},
-                                                                                     {path:'Map',outlet:'Map',component:MapComponent},{path:'Link',outlet:'Link',component:LinkComponent}]
+                                                                                     {path:'Map',outlet:'Map',component:MapComponent,canDeactivate:[notsubmitGuard]},{path:'Link',outlet:'Link',component:LinkComponent,canDeactivate:[notsubmitGuard]}]
                       ,canActivate:[authGuard]},
                         {path:'about/extra',loadChildren:()=>import('./lazy/lazymodule/lazymodule.module').then(m=>m.LazymoduleModule)},
                         {path:"**",redirectTo:"Dashboard"}
