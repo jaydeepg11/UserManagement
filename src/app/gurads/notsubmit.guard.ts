@@ -1,5 +1,5 @@
-import { CanActivateFn } from '@angular/router';
+import { CanDeactivateFn } from '@angular/router';
 
-export const notsubmitGuard: CanActivateFn = (route, state) => {
+export const notsubmitGuard: CanDeactivateFn<unknown> = (component, currentRoute, currentState, nextState) => {
   return false;
 };

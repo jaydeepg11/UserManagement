@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { CanDeactivateFn } from '@angular/router';
 
 import { notsubmitGuard } from './notsubmit.guard';
 
 describe('notsubmitGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
+  const executeGuard: CanDeactivateFn = (...guardParameters) => 
       TestBed.runInInjectionContext(() => notsubmitGuard(...guardParameters));
 
   beforeEach(() => {
