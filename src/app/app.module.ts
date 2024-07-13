@@ -10,6 +10,8 @@ import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboard.component';
 import { InformationComponent } from './Dashboard/main-dashboard/information/information.component';
 import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
+import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
+import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AddressComponent } from './Dashboard/main-dashboard/address/address.com
     ContactUsComponent,
     MainDashboardComponent,
     InformationComponent,
-    AddressComponent
+    AddressComponent,
+    MapComponent,
+    LinkComponent
     
   ],
   imports: [

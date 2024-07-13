@@ -6,12 +6,16 @@ import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import { MainDashboardComponent } from './Dashboard/main-dashboard/main-dashboard.component';
 import { InformationComponent } from './Dashboard/main-dashboard/information/information.component';
 import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
+import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
+import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
                         {path:'about',component:AboutUsComponent},
                         {path:'contact/:id',component:ContactUsComponent},
-                        {path:'dashboard',component:MainDashboardComponent,children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent}]},
+                        {path:'dashboard',component:MainDashboardComponent,children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent},
+                                                                                     {path:'Map',outlet:'Map',component:MapComponent},{path:'Link',outlet:'Link',component:LinkComponent}]
+                      },
                         {path:'about/extra',loadChildren:()=>import('./lazy/lazymodule/lazymodule.module').then(m=>m.LazymoduleModule)},
                         {path:"**",redirectTo:"Dashboard"}
                       ];
