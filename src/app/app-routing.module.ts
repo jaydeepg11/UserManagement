@@ -10,7 +10,7 @@ import { AddressComponent } from './Dashboard/main-dashboard/address/address.com
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
                         {path:'about',component:AboutUsComponent},
-                        {path:'contact',component:ContactUsComponent},
+                        {path:'contact/:id',component:ContactUsComponent},
                         {path:'dashboard',component:MainDashboardComponent,children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent}]},
                         {path:'about/extra',loadChildren:()=>import('./lazy/lazymodule/lazymodule.module').then(m=>m.LazymoduleModule)},
                         {path:"**",redirectTo:"Dashboard"}
