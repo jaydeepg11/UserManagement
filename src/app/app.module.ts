@@ -12,6 +12,7 @@ import { InformationComponent } from './Dashboard/main-dashboard/information/inf
 import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
 import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
 import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
+import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
     InformationComponent,
     AddressComponent,
     MapComponent,
-    LinkComponent
+    LinkComponent,
+    AdminaboutUsComponent
     
   ],
   imports: [

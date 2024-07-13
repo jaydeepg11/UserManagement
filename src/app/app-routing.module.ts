@@ -11,9 +11,12 @@ import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 import { authGuard } from './gurads/auth.guard';
 import { adminGuard } from './gurads/admin.guard';
 import { notsubmitGuard } from './gurads/notsubmit.guard';
+import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.component';
+import { canmatchGuard } from './gurads/canmatch.guard';
 
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
+                        {path:'about',component:AdminaboutUsComponent,canMatch:[canmatchGuard]},
                         {path:'about',component:AboutUsComponent},
                         {path:'contact/:id',component:ContactUsComponent},
                         {path:'dashboard',component:MainDashboardComponent,canActivateChild:[adminGuard],children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent},
