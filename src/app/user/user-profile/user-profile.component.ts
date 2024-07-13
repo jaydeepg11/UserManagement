@@ -27,6 +27,11 @@ public constructor(private fb:FormBuilder,private service:UserserviceService)
       this.data=res;
       console.log(res);
     })
+
+    sessionStorage.setItem("username","User:jaydeep");
+    localStorage.setItem("username2","User:jaydeep2");
+    console.log(sessionStorage.getItem("username"));
+    console.log(localStorage.getItem("username2"));
   }
 
   formsubmit()
