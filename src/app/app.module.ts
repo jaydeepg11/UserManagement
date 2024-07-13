@@ -13,7 +13,8 @@ import { AddressComponent } from './Dashboard/main-dashboard/address/address.com
 import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
 import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { HeaderInterceptor } from './interceptors/header.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import {HttpClientModule} from '@angular/common/http';
     UserModule,
     HttpClientModule 
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:HeaderInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
