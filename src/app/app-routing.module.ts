@@ -8,6 +8,7 @@ import { InformationComponent } from './Dashboard/main-dashboard/information/inf
 import { AddressComponent } from './Dashboard/main-dashboard/address/address.component';
 import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
 import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
+import { authGuard } from './gurads/auth.guard';
 
 const routes: Routes = [
                         {path:'user',component:UserProfileComponent},
@@ -15,7 +16,7 @@ const routes: Routes = [
                         {path:'contact/:id',component:ContactUsComponent},
                         {path:'dashboard',component:MainDashboardComponent,children:[{path:'information',component:InformationComponent},{path:'address',component:AddressComponent},
                                                                                      {path:'Map',outlet:'Map',component:MapComponent},{path:'Link',outlet:'Link',component:LinkComponent}]
-                      },
+                      ,canActivate:[authGuard]},
                         {path:'about/extra',loadChildren:()=>import('./lazy/lazymodule/lazymodule.module').then(m=>m.LazymoduleModule)},
                         {path:"**",redirectTo:"Dashboard"}
                       ];
