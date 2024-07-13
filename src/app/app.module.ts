@@ -13,7 +13,7 @@ import { AddressComponent } from './Dashboard/main-dashboard/address/address.com
 import { MapComponent } from './Dashboard/main-dashboard/map/map.component';
 import { LinkComponent } from './Dashboard/main-dashboard/link/link.component';
 import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.component';
-
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +27,13 @@ import { AdminaboutUsComponent } from './about/adminabout-us/adminabout-us.compo
     LinkComponent,
     AdminaboutUsComponent
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule 
+    UserModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

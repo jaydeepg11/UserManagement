@@ -26,3 +26,23 @@
     </tbody>
 </table>
 </form>
+
+<div>
+    <!-- <pre>
+        {{data|json}}
+    </pre> -->
+    <table border="1">
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Complete</th>
+        </tr>
+        <tr *ngFor="let item of data">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.completed}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild,AfterViewInit, ViewChildren, QueryList, ContentChild, AfterContentInit } from '@angular/core';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
 import {Router} from '@angular/router';
-import { MainnavbarComponent } from './Navbar/mainnavbar/mainnavbar.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
